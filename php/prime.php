@@ -11,7 +11,6 @@ for ($num = 3; $num < $max; $num += 2) {
         }
     }
     if ($prime) {
-        echo $num;
-        echo "\n";
+        echo "{$num}\n";
     }
 }
