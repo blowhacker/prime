@@ -17,35 +17,11 @@ func main() {
 	for i := 0; i < threads; i++ {
 		wg.Add(1)
 		go func(i int) {
-			// fmt.Println(i, i*max/threads, (i+1)*max/threads)
 			primeFinder(i*max/threads, (i+1)*max/threads)
 			wg.Done()
 		}(i)
 	}
 	wg.Wait()
-	// go primeFinder(1, 100)
-	// go primeFinder(100, 200)
-	// go primeFinder(200, 300)
-	// go primeFinder(300, 400)
-
-	return
-
-	for num := 3; num < max; num += 2 {
-		prime := true
-		sqrt := int(math.Sqrt(float64(num)))
-
-		for i := 3; i <= sqrt; i += 2 {
-			if num%i == 0 {
-				prime = false
-				break
-			}
-		}
-
-		if prime {
-			fmt.Println(num)
-		}
-
-	}
 
 }
 
