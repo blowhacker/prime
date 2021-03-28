@@ -1,4 +1,4 @@
-**How To And Results**
+# How To And Results
 
 **/bash**
 The bash version of this script only calculates primes up to 100
